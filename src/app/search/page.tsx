@@ -26,7 +26,7 @@ export default function Home({
                     <p>Songs</p>
                     <ul>
                         {songs?.map((song) => (
-                            <li key={song.id}>
+                            <li key={song.id} data-cy="song-item">
                                 {song.name} - {song.album_name} - {song.author_name}
                             </li>
                         ))}
@@ -36,7 +36,7 @@ export default function Home({
                     <p>Albums</p>
                     <ul>
                         {albums?.map((album) => (
-                            <li key={album.id}>
+                            <li key={album.id} data-cy="album-item">
                                 {album.name} - {album.author_name}
                             </li>
                         ))}
@@ -46,7 +46,9 @@ export default function Home({
                     <p>Authors</p>
                     <ul>
                         {authors?.map((author) => (
-                            <li key={author.id}>{author.name}</li>
+                            <li key={author.id} data-cy="author-item">
+                                {author.name}
+                            </li>
                         ))}
                     </ul>
                 </div>

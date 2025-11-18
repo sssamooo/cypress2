@@ -22,12 +22,14 @@ export function NavBar() {
                     type="text"
                     placeholder="Search"
                     className="input input-bordered w-24 md:w-auto"
+                    data-cy="search-input"
                     value={searchInput}
                     onChange={(e) => {
                         setSearchInput(e.target.value);
                     }}
                 />
                 <Link
+                    data-cy="search-button"
                     href={{
                         pathname: "/search",
                         query: searchLinkQuery
